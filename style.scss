@@ -1,0 +1,27 @@
+body {
+    background-color: black;
+    color: #dcdcdc;
+  }
+
+// define mixin named neon
+
+@mixin neon($col-1, $col-2) {
+    $main: $col-1;
+    $glow: $col-2;
+  
+    font-family: cursive;
+    color: $main;
+    text-shadow: 
+      0 0 5px $main, 0 0 15px $main, 
+      0 0 20px $main, 0 0 40px $glow,
+      0 0 60px $glow, 0 0 98px $glow;
+  }
+  
+  // apply the neon mixin to the h1 element
+  h1 {
+    @include neon(#f7cb5c, #bb3e04);
+  }
+  
+  ul {
+    @include neon(#4beeba, #0051ff);
+  }
